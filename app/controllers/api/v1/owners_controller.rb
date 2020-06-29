@@ -1,2 +1,2 @@
-class OwnersController < ApplicationController
+class Api::V1::OwnersController < ApplicationController
 end

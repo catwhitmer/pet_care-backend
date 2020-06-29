@@ -1,2 +1,2 @@
-class TodosController < ApplicationController
+class Api::V1::TodosController < ApplicationController
 end
