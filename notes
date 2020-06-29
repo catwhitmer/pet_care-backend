@@ -2,7 +2,7 @@ Overview
 
 Owner
 has_many :pets
-has_many :todos through :pet
+has_many :todos through :pets
 name
 email
 
