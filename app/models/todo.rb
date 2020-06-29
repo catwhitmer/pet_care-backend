@@ -1,6 +1,6 @@
 class Todo < ApplicationRecord
     belongs_to :pet
 
-    validates :description, :date, presence: true
-    validates_associated :pets
+    validates :description, :notes, presence: true
+    validates_associated :pet
 end
