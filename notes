@@ -17,7 +17,7 @@ breed
 Todo
 belongs_to :pet
 description
-date
+date  datetime.to_formatted_s(:short)         # => "04 Dec 00:00"
 
 
 
