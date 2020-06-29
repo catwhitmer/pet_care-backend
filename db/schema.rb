@@ -24,13 +24,15 @@ ActiveRecord::Schema.define(version: 2020_06_29_123845) do
     t.string "kind"
     t.integer "age"
     t.string "breed"
+    t.integer "owner_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "todos", force: :cascade do |t|
     t.string "description"
-    t.datetime "date"
+    t.string "notes"
+    t.integer "pet_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
