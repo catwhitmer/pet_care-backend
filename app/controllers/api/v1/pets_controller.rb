@@ -17,7 +17,7 @@ class Api::V1::PetsController < ApplicationController
     def create 
         @pet = @owner.pets.new(pet_params)
         if @pet.save
-            render json: @pet
+            render json: @owner
         else
             render json: { errors: @pet.errors.full_messages }
         end
