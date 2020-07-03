@@ -17,7 +17,7 @@ class Api::V1::TodosController < ApplicationController
     def create 
         @todo = @pet.todos.new(todo_params)
         if @todo.save
-            render json: @todo
+            render json: @owner
         else
             render json: { errors: @todo.errors.full_messages }
         end
