@@ -32,9 +32,9 @@ class Api::V1::TodosController < ApplicationController
 
     def destroy
         set_todo
-        todo.delete
+        @todo.destroy
 
-        render json: {todo_id: todo.id}
+        render json: @owner
     end
 
 
