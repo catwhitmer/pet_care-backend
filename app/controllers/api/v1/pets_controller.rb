@@ -32,8 +32,8 @@ class Api::V1::PetsController < ApplicationController
 
     def destroy
         set_pet
-        owner = Owner.find(pet.owner_id)
-        pet.delete
+        @owner = Owner.find(@pet.owner_id)
+        @pet.destroy
 
         render json: @owner
     end
