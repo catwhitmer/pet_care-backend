@@ -30,9 +30,9 @@ class Api::V1::OwnersController < ApplicationController
 
     def destroy
         set_owner
-        owner.delete
+        @owner.destroy
 
-        render json: {owner_id: owner.id}
+        render json: @owner
     end
 
 
