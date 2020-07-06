@@ -3,7 +3,7 @@ class Api::V1::PetsController < ApplicationController
     before_action :set_owner
 
     def index 
-        @pets = @owner.pets
+        @pets = Pet.all
 
         render json: @pets
     end
