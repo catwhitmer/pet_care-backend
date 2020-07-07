@@ -1,7 +1,5 @@
 class PetSerializer < ActiveModel::Serializer
-  attributes :id, :name, :kind, :age, :breed, :owner_id
-
+  attributes :id, :name, :kind, :breed, :age
   has_many :todos
-  belongs_to :owner
-  
+ 
 end
