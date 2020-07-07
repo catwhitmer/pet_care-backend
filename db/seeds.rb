@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Pet.create([
-    { name: 'Fluffy', kind: 'cat', age: 3, breed: 'Maine Coon'},
-    { name: 'Arteo', kind: 'dog', age: 1, breed: 'Husky Mix'},
-    { name: 'Peanut', kind: 'snake', age: 2, breed: 'Fancy Ball Python'}
+    { name: 'Fluffy', species: 'cat', age: 3, breed: 'Maine Coon'},
+    { name: 'Artio', species: 'dog', age: 1, breed: 'Husky Mix'},
+    { name: 'Peanut', species: 'snake', age: 2, breed: 'Fancy Ball Python'}
 ])
 
 Todo.create([

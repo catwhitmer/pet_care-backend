@@ -1,5 +1,5 @@
 class Pet < ApplicationRecord
     has_many :todos
    
-    validates :name, :kind, :breed, :age, presence: true
+    validates :name, :species, :breed, :age, presence: true
 end
