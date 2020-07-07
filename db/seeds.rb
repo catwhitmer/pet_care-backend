@@ -6,17 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Owner.create([
-    { name: 'Tim', email: 'tim@example.com' },
-    { name: 'Kaelyn', email: 'kaelyn@example.com'},
-    { name: 'John', email: 'john@eaxample.com'}
-])
-    
-
 Pet.create([
-    { name: 'Fluffy', kind: 'cat', age: 3, breed: 'Maine Coon', owner_id: 3 },
-    { name: 'Arteo', kind: 'dog', age: 1, breed: 'Husky Mix', owner_id: 1 },
-    { name: 'Peanut', kind: 'snake', age: 2, breed: 'Fancy Ball Python', owner_id: 2 }
+    { name: 'Fluffy', kind: 'cat', age: 3, breed: 'Maine Coon'},
+    { name: 'Arteo', kind: 'dog', age: 1, breed: 'Husky Mix'},
+    { name: 'Peanut', kind: 'snake', age: 2, breed: 'Fancy Ball Python'}
 ])
 
 Todo.create([
