@@ -3,7 +3,7 @@ class Api::V1::TodosController < ApplicationController
     before_action :set_pet
 
     def index 
-        @todos = @pet.todos
+        @todos = Todos.all
 
         render json: @todos
     end
@@ -17,7 +17,7 @@ class Api::V1::TodosController < ApplicationController
     def create 
         @todo = @pet.todos.new(todo_params)
         if @todo.save
-            render json: @owner
+            render json: @pet
         else
             render json: { errors: @todo.errors.full_messages }
         end
@@ -32,9 +32,10 @@ class Api::V1::TodosController < ApplicationController
 
     def destroy
         set_todo
+        @pet = Pet.find_by(@pet.todo_id)
         @todo.destroy
 
-        render json: @owner
+        render json: @todo
     end
 
 

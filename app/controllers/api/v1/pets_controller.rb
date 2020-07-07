@@ -1,7 +1,5 @@
 class Api::V1::PetsController < ApplicationController
 
-    before_action :set_owner
-
     def index 
         @pets = Pet.all
 
@@ -15,9 +13,9 @@ class Api::V1::PetsController < ApplicationController
     end
 
     def create 
-        @pet = @owner.pets.new(pet_params)
+        @pet = Pet.new(pet_params)
         if @pet.save
-            render json: @owner
+            render json: @pet
         else
             render json: { errors: @pet.errors.full_messages }
         end
@@ -25,17 +23,14 @@ class Api::V1::PetsController < ApplicationController
 
     def update 
         set_pet
-        pet.update(pet_params)
+        @pet.update(pet_params)
 
         render json: @pet
     end
 
     def destroy
         set_pet
-        @owner = Owner.find(@pet.owner_id)
         @pet.destroy
-
-        render json: @owner
     end
 
 
@@ -45,12 +40,8 @@ class Api::V1::PetsController < ApplicationController
         @pet = Pet.find_by(id: params[:id])
     end
 
-    def set_owner
-        @owner = Owner.find_by(id: params[:owner_id])
-    end
-
     def pet_params
-        params.require(:pet).permit(:name, :kind, :age, :breed, :owner_id)
+        params.require(:pet).permit(:name, :kind, :age, :breed)
     end
 
 end
