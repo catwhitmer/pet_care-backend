@@ -31,11 +31,11 @@ class Api::V1::TodosController < ApplicationController
     end
 
     def destroy
-        set_todo
-        @pet = Pet.find_by(@pet.todo_id)
-        @todo.destroy
+    todo = Todo.find(params["id"])
+    pet = Pet.find(todo.pet_id)
+    todo.destroy
 
-        render json: @todo
+    render json: @pet
     end
 
 
