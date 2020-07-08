@@ -31,6 +31,7 @@ class Api::V1::PetsController < ApplicationController
     def destroy
         set_pet
         @pet.destroy
+        render json: @pet
     end
 
 
