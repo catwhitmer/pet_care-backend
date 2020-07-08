@@ -3,7 +3,7 @@ class Api::V1::TodosController < ApplicationController
     before_action :set_pet
 
     def index 
-        @todos = Todos.all
+        @todos = Todo.all
 
         render json: @todos
     end
