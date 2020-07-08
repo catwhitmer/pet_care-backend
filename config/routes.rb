@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :pets do
         resources :todos 
       end
+        resources :todos 
     end
   end 
 end
